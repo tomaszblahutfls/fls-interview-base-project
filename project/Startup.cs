@@ -41,6 +41,11 @@ public class Startup
             options.Cookie.HttpOnly = true;
             options.Cookie.IsEssential = true;
         });
+
+        services.AddContentDeliveryApi(options => {
+            options.SiteDefinitionApiEnabled = true;
+            options.DisableScopeValidation = true;
+        });
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
