@@ -40,7 +40,7 @@ public class TemplateCoordinator : IViewTemplateModelRegistrator
         viewTemplateModelRegistrator.Add(typeof(TeaserBlock), new TemplateModel
         {
             Name = "TeaserBlockWide",
-            Tags = [Globals.ContentAreaTags.WideWidth, Globals.ContentAreaTags.FullWidth],
+            Tags = new[] {Globals.ContentAreaTags.WideWidth, Globals.ContentAreaTags.FullWidth},
             AvailableWithoutTag = false,
         });
 
@@ -56,7 +56,7 @@ public class TemplateCoordinator : IViewTemplateModelRegistrator
         {
             Name = "PageWide",
             Inherit = true,
-            Tags = [Globals.ContentAreaTags.WideWidth, Globals.ContentAreaTags.FullWidth],
+            Tags = new[] {Globals.ContentAreaTags.WideWidth, Globals.ContentAreaTags.FullWidth},
             AvailableWithoutTag = false,
             Path = PagePartialPath("PageWide.cshtml")
         });
@@ -65,7 +65,7 @@ public class TemplateCoordinator : IViewTemplateModelRegistrator
         {
             Name = "NoRenderer",
             Inherit = true,
-            Tags = [Globals.ContentAreaTags.NoRenderer],
+            Tags = new[] {Globals.ContentAreaTags.NoRenderer},
             AvailableWithoutTag = false,
             Path = BlockPath("NoRenderer.cshtml")
         });

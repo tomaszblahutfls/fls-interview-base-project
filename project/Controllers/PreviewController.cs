@@ -17,7 +17,7 @@ namespace fls_interview_base_project.Controllers;
 [TemplateDescriptor(
     Inherited = true,
     TemplateTypeCategory = TemplateTypeCategories.MvcController, //Required as controllers for blocks are registered as MvcPartialController by default
-    Tags = [RenderingTags.Preview, RenderingTags.Edit],
+    Tags = new[] {RenderingTags.Preview, RenderingTags.Edit},
     AvailableWithoutTag = false)]
 [VisitorGroupImpersonation]
 [RequireClientResources]

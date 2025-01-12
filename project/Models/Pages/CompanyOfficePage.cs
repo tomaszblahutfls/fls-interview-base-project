@@ -14,4 +14,5 @@ namespace fls_interview_base_project.Models.Pages;
 public class CompanyOfficePage : StandardPage, IContainerPage
 {
     // Write your code here
+    public virtual string Address { get; set; }
 }

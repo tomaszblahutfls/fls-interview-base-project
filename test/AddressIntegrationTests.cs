@@ -9,11 +9,15 @@ using fls_interview_base_project;
 
 namespace AddressIntegrationTestsIntegrationTests.Tests
 {
-    public class AddressIntegrationTests(WebApplicationFactory<Program> factory)
-        : IClassFixture<WebApplicationFactory<Program>>
+    public class AddressIntegrationTests : IClassFixture<WebApplicationFactory<Program>>
     {
-        private readonly HttpClient _client = factory.CreateClient();
-        
+        private readonly HttpClient _client;
+
+        public AddressIntegrationTests(WebApplicationFactory<Program> factory)
+        {
+            _client = factory.CreateClient();
+        }
+
         [Fact]
         public async Task TestAddressField()
         {

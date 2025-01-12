@@ -16,6 +16,6 @@ public class SearchPage : SitePageData, IHasRelatedContent, ISearchPage
         GroupName = SystemTabNames.Content,
         Order = 310)]
     [CultureSpecific]
-    [AllowedTypes([typeof(IContentData)], [typeof(JumbotronBlock)])]
+    [AllowedTypes(new[] {typeof(IContentData)}, new[] {typeof(JumbotronBlock)})]
     public virtual ContentArea RelatedContentArea { get; set; }
 }

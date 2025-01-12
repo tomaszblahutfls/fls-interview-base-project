@@ -12,7 +12,7 @@ namespace fls_interview_base_project.Models.Pages;
 [SiteImageUrl(Globals.StaticGraphicsFolderPath + "page-type-thumbnail-product.png")]
 [AvailableContentTypes(
     Availability = Availability.Specific,
-    IncludeOn = [typeof(StartPage)])]
+    IncludeOn = new[] {typeof(StartPage)})]
 public class ProductPage : StandardPage, IHasRelatedContent
 {
     [Required]
@@ -25,6 +25,6 @@ public class ProductPage : StandardPage, IHasRelatedContent
         GroupName = SystemTabNames.Content,
         Order = 330)]
     [CultureSpecific]
-    [AllowedTypes([typeof(IContentData)], [typeof(JumbotronBlock)])]
+    [AllowedTypes(new[] {typeof(IContentData)}, new[] {typeof(JumbotronBlock)})]
     public virtual ContentArea RelatedContentArea { get; set; }
 }

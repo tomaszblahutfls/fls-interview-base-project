@@ -14,22 +14,24 @@ namespace fls_interview_base_project.Models.Pages;
 [AvailableContentTypes(
     Availability.Specific,
     Include =
-    [
-        typeof(ContainerPage),
-        typeof(ProductPage),
-        typeof(StandardPage),
-        typeof(ISearchPage),
-        typeof(LandingPage),
-        typeof(ContentFolder)
-    ], // Pages we can create under the start page...
+        new[]
+        {
+            typeof(ContainerPage),
+            typeof(ProductPage),
+            typeof(StandardPage),
+            typeof(ISearchPage),
+            typeof(LandingPage),
+            typeof(ContentFolder)
+        }, // Pages we can create under the start page...
     ExcludeOn =
-    [
-        typeof(ContainerPage),
-        typeof(ProductPage),
-        typeof(StandardPage),
-        typeof(ISearchPage),
-        typeof(LandingPage)
-    ])] // ...and underneath those we can't create additional start pages
+        new[]
+        {
+            typeof(ContainerPage),
+            typeof(ProductPage),
+            typeof(StandardPage),
+            typeof(ISearchPage),
+            typeof(LandingPage)
+        })] // ...and underneath those we can't create additional start pages
 public class StartPage : SitePageData
 {
     [Display(

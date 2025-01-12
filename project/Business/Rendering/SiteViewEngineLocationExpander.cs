@@ -5,10 +5,10 @@ namespace fls_interview_base_project.Business.Rendering;
 public class SiteViewEngineLocationExpander : IViewLocationExpander
 {
     private static readonly string[] AdditionalPartialViewFormats =
-    [
-        TemplateCoordinator.BlockFolder + "{0}.cshtml",
-        TemplateCoordinator.PagePartialsFolder + "{0}.cshtml"
-    ];
+        {
+            TemplateCoordinator.BlockFolder + "{0}.cshtml",
+            TemplateCoordinator.PagePartialsFolder + "{0}.cshtml"
+        };
 
     public IEnumerable<string> ExpandViewLocations(ViewLocationExpanderContext context, IEnumerable<string> viewLocations)
     {
